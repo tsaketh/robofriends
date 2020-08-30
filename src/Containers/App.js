@@ -3,7 +3,6 @@ import CardArray from '../Components/CardArray';
 import './App.css';
 import Scroll from '../Components/Scroll';
 import Header from '../Components/Header';
-import Loader from '../Components/Loader';
 
 class App extends Component {
     constructor(){
@@ -27,26 +26,14 @@ class App extends Component {
         const filteredRobots = this.state.robots.filter(robots => {
             return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
         })
-        if (this.state.robots.length>10){
-            return (
-                <div className = 'tc'>
-                    <Header searchChange = {this.onSearch}/>
-                    <Scroll>
-                        <CardArray robots = {filteredRobots}/>
-                    </Scroll>
-                </div>
-            )
-        }
-        else{
-            return (
-                <div className = 'tc'>
-                    <Header searchChange = {this.onSearch}/>
-                    <Scroll>
-                        <Loader />
-                    </Scroll>
-                </div>
-            )
-        }
+        return (
+            <div className = 'tc'>
+                <Header searchChange = {this.onSearch}/>
+                <Scroll>
+                    <CardArray loader = {this.state.robots} robots = {filteredRobots}/>
+                </Scroll>
+            </div>
+        )
     }
 }
 

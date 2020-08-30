@@ -1,11 +1,17 @@
 import React from 'react';
 import Card from './Card';
+import Loader from './Loader';
 
-const CardArray = ({robots}) => {
+const CardArray = ({loader, robots}) => {
     const CardList = robots.map(({id, name, email}) => {
         return <Card id={ id} username = { name } email = { email }/>
     });
-    if (CardList.length<=0) {
+    if (loader.length<=0) {
+        return (
+            <Loader />
+        )
+    }
+    else if (CardList.length<=0) {
         return (
             <div style={{paddingTop: '30vh'}}>
                 <h3 className='f2 myFont'>No Results Found</h3>
