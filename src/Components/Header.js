@@ -4,7 +4,7 @@ import SearchBar from './SearchBar';
 const Header = (props)=> {
     return (
         <div>
-            <h1 className='f1 myFont'>RoboFriends</h1>
+            <h1 className='f1 myFont myBlue'>RoboFriends</h1>
             <SearchBar searchChange = { props.searchChange }/>
         </div>
     )

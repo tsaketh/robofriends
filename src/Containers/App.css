@@ -2,13 +2,16 @@
     font-family: myRoboFont;
     src: url('./Zilap\ Black\ Storm\ DEMO.ttf');
 }
-
 .myFont {
     font-family: myRoboFont;
     font-weight: bold;
+}
+.myBlue {
     color: rgba(0, 225, 255, 0.63);
 }
-
+.myRed {
+    color: rgb(223, 50, 50);
+}
 @keyframes spin {
     from {
         transform: rotate(0deg);

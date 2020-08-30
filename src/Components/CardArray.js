@@ -13,8 +13,9 @@ const CardArray = ({loader, robots}) => {
     }
     else if (CardList.length<=0) {
         return (
-            <div style={{paddingTop: '30vh'}}>
-                <h3 className='f2 myFont'>No Results Found</h3>
+            <div style={{paddingTop: '22vh'}}>
+                <img src={`https://robohash.org/test?set=set1&size=200x200`} alt="<../>"/>
+                <h3 className='f2 myFont myRed'>No Results Found</h3>
             </div>
         );
     }
